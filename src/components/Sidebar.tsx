@@ -8,12 +8,12 @@ const Sidebar: NextPage = () => {
     <>
       <Wrapper>
         <CompanyName>
-          <img src={'/img_logo01.svg'} width={24} height={24} alt="로고이미지" />
+          <img src={'/image/img_logo01.svg'} width={24} height={24} alt="로고이미지" />
           <span>DBDLAB Corp.</span>
         </CompanyName>
         <MenuGrouping>
           <div>
-            <img src={'/icon_dashboard01.svg'} width={15} height={15} alt="대시보드" />
+            <img src={'/image/icon_dashboard01.svg'} width={15} height={15} alt="대시보드" />
             <Link href="/dashboard">Dashboard</Link>
           </div>
           <div>
@@ -21,15 +21,15 @@ const Sidebar: NextPage = () => {
             <Link href="/research">Research</Link>
           </div>
           <div>
-            <img src={'/icon_members01.svg'} width={15} height={15} alt="회원" />
+            <img src={'/image/icon_members01.svg'} width={15} height={15} alt="회원" />
             <Link href="/members">Members</Link>
           </div>
           <div>
-            <img src={'/icon_insight01.svg'} width={15} height={15} alt="통찰력" />
+            <img src={'/image/icon_insight01.svg'} width={15} height={15} alt="통찰력" />
             <Link href="/insight">Insight</Link>
           </div>
           <div>
-            <img src={'/icon_calendar01.svg'} width={15} height={15} alt="달력" />
+            <img src={'/image/icon_calendar01.svg'} width={15} height={15} alt="달력" />
             <Link href="/calendar">Calendar</Link>
           </div>
         </MenuGrouping>
