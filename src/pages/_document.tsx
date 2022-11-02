@@ -4,7 +4,6 @@ const Document = () => {
   return (
     <Html lang="ko">
       <Head>
-        <title>DBDLAB - Dashboard</title>
         <meta name="description" content="DBDLAB - Dashboard" />
         <link
           rel="icon"

@@ -1,6 +1,10 @@
 import axios from 'axios';
 
-import Container from '../common/Container';
+import LineChart from '../components/chart/LineChart';
+import PieChart from '../components/chart/PieChart';
+// import StackedBarChart from '../components/chart/StackedBarChart';
+
+import styled from '@emotion/styled';
 
 interface CovidState {
   decideCnt: string;
@@ -23,11 +27,12 @@ const covidStateUrl = 'http://localhost:3000/data/getCovid19InfoStateJson.json';
 const covidAgeCaseUrl = 'http://localhost:3000/data/getCovid19GenAgeCaseInfoJson.json';
 
 const Dashboard = ({ covidStateList, covidAgeCaseList }: DashboardProps) => {
-  console.log(covidAgeCaseList, covidStateList);
   return (
-    <Container>
-      <h2>🤖 개발 작업 중 입니다.</h2>
-    </Container>
+    <DashboardContainer>
+      <LineChart covidStateList={covidStateList} />
+      <PieChart covidAgeCaseList={covidAgeCaseList} />
+      {/* <StackedBarChart /> */}
+    </DashboardContainer>
   );
 };
 
@@ -41,8 +46,16 @@ export const getServerSideProps = async () => {
 
   return {
     props: {
-      covidStateList: covidState.data,
-      covidAgeCaseList: covidAgeCase.data,
+      covidStateList: covidState.data.items.item,
+      covidAgeCaseList: covidAgeCase.data.items.item,
     },
   };
 };
+
+const DashboardContainer = styled.div`
+  padding: 60px;
+  display: flex;
+  background-color: #f8fafc;
+  width: 100%;
+  height: 100%;
+`;

@@ -9,9 +9,9 @@
 ## 📝 기능구현 리스트
 
 - ✅ 사이드 바 메뉴 클릭
-  - 선택 된 Menu item color 변경
-  - 해당하는 페이지로 push 후 메인 섹션은 빈페이지로 라우팅(path는 임의 설정)
-- ❌ 차트구현
+  - 선택 된 Menu item color 변경이 가능합니다.
+  - 해당하는 페이지로 push 후 메인 섹션은 빈페이지로 라우팅(path는 임의 설정)됩니다.
+- ❌ 차트구현 (진행중)
   - 코로나 일자 별 코로나 확진자 수 : **Line Chart**
   - 코로나 일자 별 연령대 확진자 수 : **Stacked Bar Chart**
   - 코로나 일자 별 성별 확진자 수 : **Pie Chart**
@@ -39,3 +39,4 @@
 - https://nextjs.org/docs/api-reference/data-fetching/get-server-side-props
 - https://nextjs.org/docs/messages/gssp-component-member
 - https://www.chartjs.org/docs/latest/samples/line/line.html
+- https://react-chartjs-2.js.org/examples/line-chart
