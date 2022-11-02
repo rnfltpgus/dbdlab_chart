@@ -1,34 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# DBDLAB - CHART
 
-## Getting Started
+안녕하세요. 프론트엔드 개발자 포지션에 지원한 정세현입니다.
+<br>
+이번 과제를 통해 새로운 것을 접해보는 시간을 가지게 되었습니다. 감사합니다.
 
-First, run the development server:
+<br>
 
-```bash
-npm run dev
-# or
-yarn dev
+## 📝 기능구현 리스트
+
+- ✅ 사이드 바 메뉴 클릭
+  - 선택 된 Menu item color 변경
+  - 해당하는 페이지로 push 후 메인 섹션은 빈페이지로 라우팅(path는 임의 설정)
+- ❌ 차트구현
+  - 코로나 일자 별 코로나 확진자 수 : **Line Chart**
+  - 코로나 일자 별 연령대 확진자 수 : **Stacked Bar Chart**
+  - 코로나 일자 별 성별 확진자 수 : **Pie Chart**
+- ✅ 주어진 Data를 사용하여 JSON URL로 이용합니다.
+  - JSON 파일 접속 후 URL 사용
+  - 코로나 19 감염 현황
+  - 코로나 19 연령별, 성별 감염 현황
+
+<br>
+
+## ⚙️ 사용방법
+
+```
+  1. git clone https://github.com/rnfltpgus/dbdlab_chart.git
+  2. cd dbdlab_chart
+  3. npm install or npm i
+  4. npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 진행하며 참고한 링크
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- https://nextjs.org/docs/api-reference/next/link
+- https://nextjs.org/docs/api-reference/next/router
+- https://nextjs.org/docs/api-reference/next.config.js/redirects
+- https://nextjs.org/docs/api-reference/data-fetching/get-server-side-props
+- https://nextjs.org/docs/messages/gssp-component-member
+- https://www.chartjs.org/docs/latest/samples/line/line.html
