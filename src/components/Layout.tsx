@@ -9,10 +9,12 @@ interface LayoutProps {
 }
 
 const Layout = ({ children }: LayoutProps) => {
+  const menuitem = ['Dashboard', 'Research', 'Members', 'Insight', 'Calendar'];
+
   return (
     <Wrapper>
       <Container>
-        <Sidebar />
+        <Sidebar menuitem={menuitem} />
         {children}
       </Container>
     </Wrapper>

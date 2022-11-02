@@ -1,18 +1,13 @@
 import type { NextPage } from 'next';
 
-import styled from '@emotion/styled';
+import Container from '../common/Container';
 
 const Calendar: NextPage = () => {
-  return <Container></Container>;
+  return (
+    <Container>
+      <h2>🤖 개발 작업 중 입니다.</h2>
+    </Container>
+  );
 };
 
 export default Calendar;
-
-const Container = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #f8fafc;
-  width: 100%;
-  height: 100%;
-`;
