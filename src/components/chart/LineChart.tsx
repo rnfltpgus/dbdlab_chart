@@ -45,20 +45,18 @@ const LineChart = ({ covidStateList }: LineChartProps) => {
   }, []);
 
   return (
-    <Container>
+    <LineChartContainer>
       <CadeName>코로나 일자별 확진자 수</CadeName>
       <hr />
       <Line options={options} data={chartData} />
-    </Container>
+    </LineChartContainer>
   );
 };
 
 export default LineChart;
 
-const Container = styled.div`
-  width: 50vw;
-`;
+const LineChartContainer = styled.div``;
 
 const CadeName = styled.span`
-  color: #4a4a4a;
+  /* color: #4a4a4a; */
 `;

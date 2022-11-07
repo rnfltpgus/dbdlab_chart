@@ -49,7 +49,7 @@ const Sidebar = ({ menuitem }: SidebarProps) => {
 export default Sidebar;
 
 const Wrapper = styled.div`
-  width: 350px;
+  width: 270px;
   height: 100%;
   padding: 60px 20px;
   background-color: #f8f8f8;
@@ -60,15 +60,15 @@ const CompanyName = styled.div`
   display: flex;
   justify-content: center;
 
-  & span {
-    margin-left: 10px;
+  & img {
+    margin-right: 10px;
     font-size: 18px;
-    font-weight: 900;
   }
 `;
 
 const MenuGrouping = styled.div`
   margin-top: 65px;
+  cursor: pointer;
 `;
 
 const Menu = styled.div<MenuProps>`

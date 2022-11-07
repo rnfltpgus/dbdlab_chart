@@ -13,10 +13,10 @@ const Layout = ({ children }: LayoutProps) => {
 
   return (
     <Wrapper>
-      <Container>
+      <SidebarMenu>
         <Sidebar menuitem={menuitem} />
-        {children}
-      </Container>
+      </SidebarMenu>
+      <MenuComponent>{children}</MenuComponent>
     </Wrapper>
   );
 };
@@ -25,21 +25,16 @@ export default Layout;
 
 const Wrapper = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
 `;
 
-const Container = styled.div`
+const SidebarMenu = styled.div`
   display: flex;
-  width: 100%;
-  height: 100vh;
-  margin: auto;
+`;
 
-  @media (max-width: 640px) {
-    width: 100%;
-    height: 100vh;
-    margin: 0;
-  }
+const MenuComponent = styled.div`
+  width: 100%;
+  background-color: #e4e4e4;
+  padding: 10px;
+  overflow-x: hidden;
 `;

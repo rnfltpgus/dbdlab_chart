@@ -36,7 +36,7 @@ const PieChart = ({ covidAgeCaseList }: PieChartProps) => {
     <Container>
       <CadeName>일자별 연령대 확진자 수</CadeName>
       <hr />
-      <Pie data={data} />
+      <Pie data={data} height="20" />
     </Container>
   );
 };
@@ -44,8 +44,9 @@ const PieChart = ({ covidAgeCaseList }: PieChartProps) => {
 export default PieChart;
 
 const Container = styled.div`
-  width: 25vw;
-  margin-left: 1vw;
+  /* width: 25vw; */
+  /* margin-top: 5vh; */
+  /* margin-left: 1vw; */
 `;
 
 const CadeName = styled.span`

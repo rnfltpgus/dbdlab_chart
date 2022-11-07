@@ -64,10 +64,10 @@ const StackedBarChart = () => {
 export default StackedBarChart;
 
 const Container = styled.div`
-  width: 60vw;
-  max-width: 700px;
+  /* width: 60vw;
+  max-width: 700px; */
 `;
 
 const CadeName = styled.span`
-  color: #4a4a4a;
+  /* color: #4a4a4a; */
 `;

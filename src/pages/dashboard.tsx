@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-import LineChart from '../components/chart/LineChart';
-import PieChart from '../components/chart/PieChart';
+// import LineChart from '../components/chart/LineChart';
+// import PieChart from '../components/chart/PieChart';
 // import StackedBarChart from '../components/chart/StackedBarChart';
 
 import styled from '@emotion/styled';
@@ -29,9 +29,11 @@ const covidAgeCaseUrl = 'http://localhost:3000/data/getCovid19GenAgeCaseInfoJson
 const Dashboard = ({ covidStateList, covidAgeCaseList }: DashboardProps) => {
   return (
     <DashboardContainer>
-      <LineChart covidStateList={covidStateList} />
-      <PieChart covidAgeCaseList={covidAgeCaseList} />
-      {/* <StackedBarChart /> */}
+      <TopContainer>{/* <LineChart covidStateList={covidStateList} /> */}</TopContainer>
+      <RowContainer>
+        <RowLeftContainer>{/* <PieChart covidAgeCaseList={covidAgeCaseList} /> */}</RowLeftContainer>
+        <RowRightContainer>{/* <StackedBarChart /> */}</RowRightContainer>
+      </RowContainer>
     </DashboardContainer>
   );
 };
@@ -53,9 +55,27 @@ export const getServerSideProps = async () => {
 };
 
 const DashboardContainer = styled.div`
-  padding: 60px;
   display: flex;
-  background-color: #f8fafc;
+  flex-direction: column;
+  /* padding: 54px; */
   width: 100%;
   height: 100%;
+  background-color: #f8fafc;
+`;
+
+const TopContainer = styled.div`
+  height: 100%;
+`;
+
+const RowContainer = styled.div`
+  display: flex;
+  height: 100%;
+`;
+
+const RowLeftContainer = styled.div`
+  width: 50%;
+`;
+
+const RowRightContainer = styled.div`
+  width: 50%;
 `;
