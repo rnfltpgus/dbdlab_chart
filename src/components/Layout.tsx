@@ -28,13 +28,11 @@ const Wrapper = styled.div`
   height: 100vh;
 `;
 
-const SidebarMenu = styled.div`
-  display: flex;
-`;
+const SidebarMenu = styled.div``;
 
 const MenuComponent = styled.div`
   width: 100%;
-  background-color: #e4e4e4;
+  background-color: #e5e5e5;
   padding: 10px;
   overflow-x: hidden;
 `;

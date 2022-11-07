@@ -1,7 +1,8 @@
 import React, { useMemo } from 'react';
 
 import { Line } from 'react-chartjs-2';
-import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, ChartData } from 'chart.js';
+import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, ChartData, ChartOptions } from 'chart.js';
+import dayjs from 'dayjs';
 
 import styled from '@emotion/styled';
 
@@ -17,7 +18,7 @@ interface LineChartProps {
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
-export const options = {
+const options: ChartOptions<'line'> = {
   responsive: true,
   plugins: {
     legend: {
@@ -28,7 +29,8 @@ export const options = {
 
 const LineChart = ({ covidStateList }: LineChartProps) => {
   const chartData = useMemo(() => {
-    const dateList = covidStateList.map((item) => item.stateDt).reverse();
+    const dateList = covidStateList.map((item) => dayjs(item.stateDt).format('MM/DD')).reverse();
+
     const detailedData: ChartData<'line'> = {
       labels: dateList,
       datasets: [
@@ -48,15 +50,17 @@ const LineChart = ({ covidStateList }: LineChartProps) => {
     <LineChartContainer>
       <CadeName>코로나 일자별 확진자 수</CadeName>
       <hr />
-      <Line options={options} data={chartData} />
+      <Line options={options} data={chartData} height="80" />
     </LineChartContainer>
   );
 };
 
 export default LineChart;
 
-const LineChartContainer = styled.div``;
+const LineChartContainer = styled.div`
+  padding: 50px 50px 10px 50px;
+`;
 
 const CadeName = styled.span`
-  /* color: #4a4a4a; */
+  color: #4a4a4a;
 `;

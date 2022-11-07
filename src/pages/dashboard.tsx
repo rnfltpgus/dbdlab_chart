@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-// import LineChart from '../components/chart/LineChart';
-// import PieChart from '../components/chart/PieChart';
-// import StackedBarChart from '../components/chart/StackedBarChart';
+import LineChart from '../components/chart/LineChart';
+import PieChart from '../components/chart/PieChart';
+import StackedBarChart from '../components/chart/StackedBarChart';
 
 import styled from '@emotion/styled';
 
@@ -29,9 +29,13 @@ const covidAgeCaseUrl = 'http://localhost:3000/data/getCovid19GenAgeCaseInfoJson
 const Dashboard = ({ covidStateList, covidAgeCaseList }: DashboardProps) => {
   return (
     <DashboardContainer>
-      <TopContainer>{/* <LineChart covidStateList={covidStateList} /> */}</TopContainer>
+      <TopContainer>
+        <LineChart covidStateList={covidStateList} />
+      </TopContainer>
       <RowContainer>
-        <RowLeftContainer>{/* <PieChart covidAgeCaseList={covidAgeCaseList} /> */}</RowLeftContainer>
+        <RowLeftContainer>
+          <PieChart covidAgeCaseList={covidAgeCaseList} />
+        </RowLeftContainer>
         <RowRightContainer>{/* <StackedBarChart /> */}</RowRightContainer>
       </RowContainer>
     </DashboardContainer>
