@@ -14,8 +14,6 @@
 </div>
 </details>
 
-진행하면서 렌더링 최적화를 위해서 import 시, 필요한 것만 {} 묶어 import하였고, 전역으로 상태관리를 사용하지 않고 props를 내려 사용하였습니다.
-<br>
 과제를 완료하지 못하였지만, 많이 배우는 시간이 되었습니다. 감사합니다.
 
 <br>
@@ -49,14 +47,13 @@
 
 ## 🚀 진행하며 참고한 링크
 
-- https://nextjs.org/docs/api-reference/next/link
-- https://nextjs.org/docs/api-reference/next/router
-- https://nextjs.org/docs/api-reference/next.config.js/redirects
-- https://nextjs.org/docs/api-reference/data-fetching/get-server-side-props
-- https://nextjs.org/docs/messages/gssp-component-member
-- https://www.chartjs.org/docs/latest/samples/line/line.html
-- https://react-chartjs-2.js.org/examples/line-chart
-- https://www.chartjs.org/docs/latest/configuration/responsive.html
-- https://coolors.co/fefefe-629acd-7facd6-ebaba8-ffffff
-- https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Set
-- https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
+- [링크 이용방법](https://nextjs.org/docs/api-reference/next/link)
+- [라우터 이용방법](https://nextjs.org/docs/api-reference/next/router)
+- [리다이렉트 config.js 셋팅](https://nextjs.org/docs/api-reference/next.config.js/redirects)
+- [Next.js 데이터 가져오는 방법](https://nextjs.org/docs/api-reference/data-fetching/get-server-side-props)
+- [데이터 호출 에러](https://nextjs.org/docs/messages/gssp-component-member)
+- [차트 예시](https://react-chartjs-2.js.org/examples/line-chart)
+- [반응형 차트 옵션 참고](https://www.chartjs.org/docs/latest/configuration/responsive.html)
+- [피그마 색상 뽑기](https://coolors.co/fefefe-629acd-7facd6-ebaba8-ffffff)
+- [new Set() 사용법](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Set)
+- [구조분해할당](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
