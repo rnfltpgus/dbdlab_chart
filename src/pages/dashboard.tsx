@@ -34,9 +34,11 @@ const Dashboard = ({ covidStateList, covidAgeCaseList }: DashboardProps) => {
       </TopContainer>
       <RowContainer>
         <RowLeftContainer>
-          <DoughnutChart covidAgeCaseList={covidAgeCaseList} />
+          <StackedBarChart covidAgeCaseList={covidAgeCaseList} />
         </RowLeftContainer>
-        <RowRightContainer>{/* <StackedBarChart /> */}</RowRightContainer>
+        <RowRightContainer>
+          <DoughnutChart covidAgeCaseList={covidAgeCaseList} />
+        </RowRightContainer>
       </RowContainer>
     </DashboardContainer>
   );
@@ -61,7 +63,6 @@ export const getServerSideProps = async () => {
 const DashboardContainer = styled.div`
   display: flex;
   flex-direction: column;
-  /* padding: 54px; */
   width: 100%;
   height: 100%;
   background-color: #f8fafc;

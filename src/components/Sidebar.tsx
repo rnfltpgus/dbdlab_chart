@@ -32,7 +32,7 @@ const Sidebar = ({ menuitem }: SidebarProps) => {
           return (
             <Menu key={item} isChoice={choice === item} onClick={() => menuChoiceHandle(item)}>
               <img
-                src={item == 'research' && 'Research' ? 'https://cdn-icons-png.flaticon.com/512/1924/1924990.png' : `/image/icon_${item}01.svg`}
+                src={item === 'research' && 'Research' ? 'https://cdn-icons-png.flaticon.com/512/1924/1924990.png' : `/image/icon_${item}01.svg`}
                 width={15}
                 height={15}
                 // alt={item}

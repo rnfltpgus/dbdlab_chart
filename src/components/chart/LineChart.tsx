@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 
-import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, ChartData, ChartOptions } from 'chart.js';
+import { Line } from 'react-chartjs-2';
 import dayjs from 'dayjs';
 
 import styled from '@emotion/styled';
@@ -37,10 +37,10 @@ const LineChart = ({ covidStateList }: LineChartProps) => {
       datasets: [
         {
           label: 'Confirmed Patients',
+          data: data,
           backgroundColor: '#E79997',
           borderColor: '#e79997',
-          borderWidth: 4,
-          data: data,
+          borderWidth: 3,
         },
       ],
     };

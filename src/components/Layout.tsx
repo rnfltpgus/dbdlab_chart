@@ -8,9 +8,9 @@ interface LayoutProps {
   children: ReactNode;
 }
 
-const Layout = ({ children }: LayoutProps) => {
-  const menuitem = ['Dashboard', 'Research', 'Members', 'Insight', 'Calendar'];
+const menuitem = ['Dashboard', 'Research', 'Members', 'Insight', 'Calendar'];
 
+const Layout = ({ children }: LayoutProps) => {
   return (
     <Wrapper>
       <SidebarMenu>

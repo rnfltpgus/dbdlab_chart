@@ -46,9 +46,13 @@ const DoughnutChart = ({ covidAgeCaseList }: DoughnutProps) => {
   const { setLabels, chartData } = useMemo(() => {
     const genderData: GenderData = {};
     const chartData: DoughnutChartData = {};
-    const setLabels = new Set<string>('');
+    const setLabels = new Set<string>();
 
     covidAgeCaseList.forEach((item) => {
+      if (!(item.gubun === '남성' || item.gubun === '여성')) {
+        return;
+      }
+
       if (item.gubun === '남성' || item.gubun === '여성') {
         const dateList = dayjs(item.stateDt).format('MM/DD');
 
@@ -75,8 +79,7 @@ const DoughnutChart = ({ covidAgeCaseList }: DoughnutProps) => {
           {
             label: 'Number of Gender Confirmed',
             data: genderData[item],
-            backgroundColor: ['rgb(98, 154, 205, 0.6)', 'rgb(235, 171, 168, 0.6)'],
-            borderColor: ['rgb(98, 154, 205)', 'rgb(235, 171, 168)'],
+            backgroundColor: ['#629acd', '#ebaba8'],
             borderWidth: 1,
           },
         ],
