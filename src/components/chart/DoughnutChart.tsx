@@ -16,7 +16,7 @@ interface CovidAgeCaseInfo {
   gubun: string;
 }
 
-interface DoughnutProps {
+interface DoughnutChartProps {
   covidAgeCaseList: CovidAgeCaseInfo[];
 }
 
@@ -40,7 +40,7 @@ const options: ChartOptions<'doughnut'> = {
   maintainAspectRatio: false,
 };
 
-const DoughnutChart = ({ covidAgeCaseList }: DoughnutProps) => {
+const DoughnutChart = ({ covidAgeCaseList }: DoughnutChartProps) => {
   const [selectedDate, setSelectedDate] = useState<string>('');
 
   const { setLabels, chartData } = useMemo(() => {

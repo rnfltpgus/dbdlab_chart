@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 import LineChart from '../components/chart/LineChart';
-import DoughnutChart from '../components/chart/DoughnutChart';
 import StackedBarChart from '../components/chart/StackedBarChart';
+import DoughnutChart from '../components/chart/DoughnutChart';
 
 import styled from '@emotion/styled';
 
