@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 import LineChart from '../components/chart/LineChart';
-import PieChart from '../components/chart/PieChart';
+import DoughnutChart from '../components/chart/DoughnutChart';
 import StackedBarChart from '../components/chart/StackedBarChart';
 
 import styled from '@emotion/styled';
@@ -34,7 +34,7 @@ const Dashboard = ({ covidStateList, covidAgeCaseList }: DashboardProps) => {
       </TopContainer>
       <RowContainer>
         <RowLeftContainer>
-          <PieChart covidAgeCaseList={covidAgeCaseList} />
+          <DoughnutChart covidAgeCaseList={covidAgeCaseList} />
         </RowLeftContainer>
         <RowRightContainer>{/* <StackedBarChart /> */}</RowRightContainer>
       </RowContainer>

@@ -6,6 +6,8 @@ import dayjs from 'dayjs';
 
 import styled from '@emotion/styled';
 
+ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
+
 interface CovidState {
   decideCnt: string;
   stateDt: string;
@@ -15,8 +17,6 @@ interface CovidState {
 interface LineChartProps {
   covidStateList: CovidState[];
 }
-
-ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
 const options: ChartOptions<'line'> = {
   responsive: true,
@@ -30,15 +30,17 @@ const options: ChartOptions<'line'> = {
 const LineChart = ({ covidStateList }: LineChartProps) => {
   const chartData = useMemo(() => {
     const dateList = covidStateList.map((item) => dayjs(item.stateDt).format('MM/DD')).reverse();
+    const data = covidStateList.map((item) => Number(item.decideCnt));
 
     const detailedData: ChartData<'line'> = {
       labels: dateList,
       datasets: [
         {
-          label: 'Daily Status',
+          label: 'Confirmed Patients',
           backgroundColor: '#E79997',
-          borderWidth: 2,
-          data: covidStateList.map((item) => Number(item.decideCnt)),
+          borderColor: '#e79997',
+          borderWidth: 4,
+          data: data,
         },
       ],
     };
@@ -50,7 +52,7 @@ const LineChart = ({ covidStateList }: LineChartProps) => {
     <LineChartContainer>
       <CadeName>코로나 일자별 확진자 수</CadeName>
       <hr />
-      <Line options={options} data={chartData} height="80" />
+      <Line options={options} data={chartData} height="75" />
     </LineChartContainer>
   );
 };
@@ -63,4 +65,5 @@ const LineChartContainer = styled.div`
 
 const CadeName = styled.span`
   color: #4a4a4a;
+  font-weight: bold;
 `;

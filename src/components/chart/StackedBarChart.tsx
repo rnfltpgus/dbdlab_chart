@@ -15,7 +15,7 @@ export const options = {
   plugins: {
     title: {
       display: true,
-      text: 'Chart.js Bar Chart - Stacked',
+      text: 'Number of Age Group Confirmed',
     },
   },
   responsive: true,
@@ -55,7 +55,7 @@ const StackedBarChart = () => {
 
   return (
     <Container>
-      <CadeName>일자별 성별 확진자 수</CadeName>
+      <CadeName>일자별 연령대 확진자 수</CadeName>
       <Bar options={options} data={data} />;
     </Container>
   );
@@ -69,5 +69,6 @@ const Container = styled.div`
 `;
 
 const CadeName = styled.span`
-  /* color: #4a4a4a; */
+  color: #4a4a4a;
+  font-weight: bold;
 `;

@@ -27,7 +27,7 @@
   - [x] 해당하는 페이지로 push 후 메인 섹션은 빈페이지로 라우팅(path는 임의 설정)됩니다.
 - ❌ 차트구현 (진행중)
   - [x] 코로나 일자 별 코로나 확진자 수 : **Line Chart**
-  - [ ] 코로나 일자 별 연령대 확진자 수 : **Stacked Bar Chart**
+  - [x] 코로나 일자 별 연령대 확진자 수 : **Stacked Bar Chart**
   - [ ] 코로나 일자 별 성별 확진자 수 : **Pie Chart**
 - ✅ 주어진 Data를 사용하여 JSON URL로 이용합니다.
   - [x] JSON 파일 접속 후 URL 사용
@@ -56,3 +56,7 @@
 - https://nextjs.org/docs/messages/gssp-component-member
 - https://www.chartjs.org/docs/latest/samples/line/line.html
 - https://react-chartjs-2.js.org/examples/line-chart
+- https://www.chartjs.org/docs/latest/configuration/responsive.html
+- https://coolors.co/fefefe-629acd-7facd6-ebaba8-ffffff
+- https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Set
+- https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
