@@ -23,8 +23,8 @@ interface DashboardProps {
   covidAgeCaseList: CovidAgeCaseInfo[];
 }
 
-const covidStateUrl = 'http://localhost:3000/data/getCovid19InfoStateJson.json';
-const covidAgeCaseUrl = 'http://localhost:3000/data/getCovid19GenAgeCaseInfoJson.json';
+const covidStateUrl = process.env.NEXT_PUBLIC_COVID_STATE_URL;
+const covidAgeCaseUrl = process.env.NEXT_PUBLIC_COVID_AGE_CASE_URL;
 
 const Dashboard = ({ covidStateList, covidAgeCaseList }: DashboardProps) => {
   return (
@@ -47,8 +47,8 @@ const Dashboard = ({ covidStateList, covidAgeCaseList }: DashboardProps) => {
 export default Dashboard;
 
 export const getServerSideProps = async () => {
-  const covidState = await axios.get(covidStateUrl);
-  const covidAgeCase = await axios.get(covidAgeCaseUrl);
+  const covidState = await axios.get(covidStateUrl as string);
+  const covidAgeCase = await axios.get(covidAgeCaseUrl as string);
 
   if (!covidState && !covidAgeCase) return;
 
