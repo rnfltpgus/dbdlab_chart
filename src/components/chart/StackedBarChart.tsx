@@ -81,7 +81,7 @@ const StackedBarChart = ({ covidAgeCaseList }: StackedBarChartProps) => {
     <StackedBarContainer>
       <CadeName>일자별 연령대 확진자 수</CadeName>
       <hr />
-      <Bar options={options} data={chartData} />;
+      <Bar options={options} data={chartData} />
     </StackedBarContainer>
   );
 };
