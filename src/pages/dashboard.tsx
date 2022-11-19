@@ -7,7 +7,8 @@ import DoughnutChart from '../components/chart/DoughnutChart';
 import styled from '@emotion/styled';
 
 interface CovidState {
-  decideCnt: string;
+  confCase: number;
+  // decideCnt: string;
   stateDt: string;
   stateTime: string;
 }
@@ -23,8 +24,8 @@ interface DashboardProps {
   covidAgeCaseList: CovidAgeCaseInfo[];
 }
 
-const covidStateUrl = process.env.NEXT_PUBLIC_COVID_STATE_URL;
-const covidAgeCaseUrl = process.env.NEXT_PUBLIC_COVID_AGE_CASE_URL;
+const covidStateUrl = 'http://localhost:3000/data/getCovid19GenAgeCaseInfoJson.json';
+const covidAgeCaseUrl = 'http://localhost:3000/data/getCovid19GenAgeCaseInfoJson.json';
 
 const Dashboard = ({ covidStateList, covidAgeCaseList }: DashboardProps) => {
   return (

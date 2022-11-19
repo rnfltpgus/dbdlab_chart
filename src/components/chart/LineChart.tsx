@@ -9,7 +9,8 @@ import styled from '@emotion/styled';
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
 interface CovidState {
-  decideCnt: string;
+  confCase: number;
+  // decideCnt: string;
   stateDt: string;
   stateTime: string;
 }
@@ -30,10 +31,15 @@ const options: ChartOptions<'line'> = {
 const LineChart = ({ covidStateList }: LineChartProps) => {
   const chartData = useMemo(() => {
     const dateList = covidStateList.map((item) => dayjs(item.stateDt).format('MM/DD')).reverse();
-    const data = covidStateList.map((item) => Number(item.decideCnt));
+    const data = covidStateList.map((item) => Number(item.confCase));
+    const setLabels = new Set<string>();
+
+    dateList.forEach((item) => {
+      setLabels.add(item);
+    });
 
     const detailedData: ChartData<'line'> = {
-      labels: dateList,
+      labels: [...setLabels],
       datasets: [
         {
           label: 'Confirmed Patients',
